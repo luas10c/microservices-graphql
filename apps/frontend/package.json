@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "scripts": {
+    "dev": "next"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.3",
+    "framer-motion": "^8.0.2",
+    "next": "^13.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "@types/react": "^18.0.26",
+    "typescript": "^4.9.4"
+  }
+}

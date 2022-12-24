@@ -1,0 +1,48 @@
+syntax="proto3";
+
+package invoice;
+
+message Empty {}
+
+service InvoiceService {
+  rpc getAll(GetAllRequest) returns(GetAllResponse);
+  rpc getById(GetByIdRequest) returns(GetByIdResponse);
+  rpc create(CreateRequest) returns(Empty);
+  rpc update(UpdateRequest) returns(UpdateResponse);
+  rpc remove(RemoveRequest) returns(Empty);
+}
+
+message Invoice {
+  string id = 1;
+  string name = 2;
+  uint32 price = 3;
+}
+
+message GetAllRequest {
+  optional uint32 total = 1;
+}
+
+message GetAllResponse {
+  repeated Invoice invoice = 1;
+}
+
+message GetByIdRequest {
+  string id = 1;
+}
+
+message GetByIdResponse {
+  Invoice invoice = 1;
+}
+
+message CreateRequest {
+  string name = 1;
+  uint32 price = 2;
+}
+
+message UpdateRequest {}
+
+message UpdateResponse {}
+
+message RemoveRequest {
+  string id = 1;
+}

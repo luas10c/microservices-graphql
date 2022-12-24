@@ -1,0 +1,13 @@
+{
+  "name": "websockets",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.6.3"
+  }
+}
